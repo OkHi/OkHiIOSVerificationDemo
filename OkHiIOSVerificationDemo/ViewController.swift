@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     private let okCollect = OkCollect()
     private let okVerify = OkVerify()
-    private let okhiConfig = OkHiConfig().withUsageTypes(usageTypes: [.digitalVerification]).enableAppBar().enableStreetView()
+    private let okhiConfig = OkHiConfig().withUsageTypes(usageTypes: [.physicalVerification]).enableAppBar().enableStreetView()
     private let okHiTheme = OkHiTheme().with(logoUrl: "https://cdn.okhi.co/icon.png").with(appBarColor: "#333").with(appName: "OkHi")
     
     override func viewDidLoad() {
