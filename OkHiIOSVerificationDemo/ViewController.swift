@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     
     private let okCollect = OkCollect()
     private let okVerify = OkVerify()
-    private let okhiConfig = OkHiConfig().withUsageTypes(usageTypes: [.digitalVerification]).enableAppBar().enableStreetView()
+    private var okhiConfig = OkHiConfig().withUsageTypes(usageTypes: [.addressBook]).enableAppBar().enableStreetView()
     private let okHiTheme = OkHiTheme().with(logoUrl: "https://cdn.okhi.co/icon.png").with(appBarColor: "#333").with(appName: "OkHi")
     
     override func viewDidLoad() {
@@ -21,8 +21,16 @@ class ViewController: UIViewController {
         okVerify.delegate = self
     }
     
-    @IBAction func onVerifyAddressClick(_ sender: UIButton) {
+    @IBAction func onCreateAddressClick(_ sender: UIButton) {
         startAddressCreation()
+    }
+    
+    @IBAction func onVerifySavedAddressClick(_ sender: UIButton) {
+        if let savedAddress = DB.fetchSavedAddress() {
+            okhiConfig = OkHiConfig().withUsageTypes(usageTypes: [.digitalVerification]).enableAppBar().enableStreetView()
+            guard let vc = okCollect.viewController(with: savedAddress.user, okhiLocation: savedAddress.location, okHiTheme: okHiTheme, okHiConfig: okhiConfig) else { return }
+            self.present(vc, animated: true, completion: nil)
+        }
     }
     
     private func startAddressCreation() {
@@ -35,7 +43,7 @@ class ViewController: UIViewController {
     }
     
     private func createOkHiUser() -> OkHiUser {
-        return OkHiUser(phoneNumber: "+2457...")
+        return OkHiUser(phoneNumber: "+254....")
             .with(email: "jane@okhi.co")
             .with(firstName: "Jane")
             .with(lastName: "Doe")
@@ -58,6 +66,7 @@ extension ViewController: OkCollectDelegate {
     }
     
     func collect(didSelectAddress user: OkHiUser, location: OkHiLocation) {
+        DB.saveAddress(user: user, location: location)
         startAddressVerification(user: user, location: location)
     }
 }
