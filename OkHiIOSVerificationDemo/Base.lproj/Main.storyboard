@@ -16,20 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUF-PC-Ffh">
-                                <rect key="frame" x="118.66666666666669" y="408.66666666666669" width="156" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6g-OT-J9q">
+                                <rect key="frame" x="115.33333333333333" y="408.66666666666669" width="162.66666666666669" height="35"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Verify an address"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Create an address"/>
                                 <connections>
-                                    <action selector="onVerifyAddressClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S8z-7H-ayx"/>
+                                    <action selector="onCreateAddressClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8oR-Qo-Av9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CA-js-AEC">
+                                <rect key="frame" x="105.33333333333333" y="478.66666666666669" width="182.33333333333337" height="35.000000000000057"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Verify saved address"/>
+                                <connections>
+                                    <action selector="onVerifySavedAddressClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rJJ-eM-MEZ"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="PUF-PC-Ffh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pht-OR-6c6"/>
-                            <constraint firstItem="PUF-PC-Ffh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="kIV-ME-oCz"/>
+                            <constraint firstItem="9CA-js-AEC" firstAttribute="top" secondItem="m6g-OT-J9q" secondAttribute="bottom" constant="35" id="OUZ-tz-fyx"/>
+                            <constraint firstItem="m6g-OT-J9q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="c66-o0-wH0"/>
+                            <constraint firstItem="m6g-OT-J9q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t9f-oW-h8Q"/>
+                            <constraint firstItem="9CA-js-AEC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w8o-qr-uGG"/>
                         </constraints>
                     </view>
                 </viewController>
