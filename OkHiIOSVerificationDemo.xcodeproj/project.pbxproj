@@ -13,8 +13,8 @@
 		6DB6EC652CE4D2CD0014B3BB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6DB6EC642CE4D2CD0014B3BB /* Base */; };
 		6DB6EC672CE4D2CF0014B3BB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6DB6EC662CE4D2CF0014B3BB /* Assets.xcassets */; };
 		6DB6EC6A2CE4D2CF0014B3BB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 6DB6EC692CE4D2CF0014B3BB /* Base */; };
-		6DB6EC732CE4DBF10014B3BB /* OkHi in Frameworks */ = {isa = PBXBuildFile; productRef = 6DB6EC722CE4DBF10014B3BB /* OkHi */; };
 		6DB6EC762CE4E51B0014B3BB /* DB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DB6EC752CE4E51B0014B3BB /* DB.swift */; };
+		6DC666A22CF99194007B41E5 /* OkHi in Frameworks */ = {isa = PBXBuildFile; productRef = 6DC666A12CF99194007B41E5 /* OkHi */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6DB6EC732CE4DBF10014B3BB /* OkHi in Frameworks */,
+				6DC666A22CF99194007B41E5 /* OkHi in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,7 +97,7 @@
 			);
 			name = OkHiIOSVerificationDemo;
 			packageProductDependencies = (
-				6DB6EC722CE4DBF10014B3BB /* OkHi */,
+				6DC666A12CF99194007B41E5 /* OkHi */,
 			);
 			productName = OkHiIOSVerificationDemo;
 			productReference = 6DB6EC5A2CE4D2CD0014B3BB /* OkHiIOSVerificationDemo.app */;
@@ -128,7 +128,7 @@
 			);
 			mainGroup = 6DB6EC512CE4D2CD0014B3BB;
 			packageReferences = (
-				6DB6EC712CE4DBF10014B3BB /* XCRemoteSwiftPackageReference "ios-okhi" */,
+				6DC666A02CF99194007B41E5 /* XCRemoteSwiftPackageReference "ios-okhi" */,
 			);
 			productRefGroup = 6DB6EC5B2CE4D2CD0014B3BB /* Products */;
 			projectDirPath = "";
@@ -385,20 +385,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		6DB6EC712CE4DBF10014B3BB /* XCRemoteSwiftPackageReference "ios-okhi" */ = {
+		6DC666A02CF99194007B41E5 /* XCRemoteSwiftPackageReference "ios-okhi" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/OkHi/ios-okhi";
 			requirement = {
 				kind = exactVersion;
-				version = 1.9.45;
+				version = 1.9.46;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		6DB6EC722CE4DBF10014B3BB /* OkHi */ = {
+		6DC666A12CF99194007B41E5 /* OkHi */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 6DB6EC712CE4DBF10014B3BB /* XCRemoteSwiftPackageReference "ios-okhi" */;
+			package = 6DC666A02CF99194007B41E5 /* XCRemoteSwiftPackageReference "ios-okhi" */;
 			productName = OkHi;
 		};
 /* End XCSwiftPackageProductDependency section */
