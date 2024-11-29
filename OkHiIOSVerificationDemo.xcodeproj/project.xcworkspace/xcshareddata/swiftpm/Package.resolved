@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/OkHi/ios-okhi",
       "state" : {
-        "revision" : "773a9de7e2241d76603f4668b95938df90da524b",
-        "version" : "1.9.45"
+        "revision" : "a34022c80463a8614ade883e6d213b9fdf5b9d30",
+        "version" : "1.9.46"
       }
     }
   ],
