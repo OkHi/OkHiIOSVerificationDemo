@@ -38,8 +38,8 @@ class ViewController: UIViewController {
         self.present(vc, animated: true, completion: nil)
     }
     
-    private func startAddressVerification(user: OkHiUser, location: OkHiLocation) {
-        okVerify.startAddressVerification(user: user, location: location)
+    private func startAddressVerification(response: OkCollectSuccessResponse) {
+        okVerify.startAddressVerification(response: response)
     }
     
     private func createOkHiUser() -> OkHiUser {
@@ -65,9 +65,9 @@ extension ViewController: OkCollectDelegate {
         showMessage(title: "Error: \(error.code)", message: error.message)
     }
     
-    func collect(didSelectAddress user: OkHiUser, location: OkHiLocation) {
-        DB.saveAddress(user: user, location: location)
-        startAddressVerification(user: user, location: location)
+    func collect(didSelectAddress response: OkCollectSuccessResponse) {
+        DB.saveAddress(user: response.user, location: response.location)
+        startAddressVerification(response: response)
     }
 }
 
